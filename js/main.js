@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
-    var $bHeader       = $('.b-header'),
-        $bPromo        = $('.b-promo'),
-        $bTopLine      = $('.b-top-line'),
-        $bToTop        = $('.b-to-top');
+    var $bHeader      = $('.b-header');
+    var $bPromo       = $('.b-promo');
+    var $bTopLine     = $('.b-top-line');
+    var $bToTop       = $('.b-to-top');
+    var $bSetLocation = $('.b-set-location');
 
     if ($bHeader.length) {
         $(window).resize(function() {
@@ -28,6 +29,24 @@ $(document).ready(function() {
 
         });
     }
+
+    /* Определение города
+    ------------------------------------------------------------------------------- */
+
+    if (city) {
+        $bTopLine.find('.b-top-line__location__city').text(city);
+    }
+
+    $bSetLocation.find('button').click(function() {
+        var $city = $bSetLocation.find('[name="city"]');
+
+        if (!$city.val()) {
+            $city.addClass('error');
+        } else {
+            $bTopLine.find('.b-top-line__location__city').text($city.val());
+            $.fancybox.close();
+        }
+    });
 
     /* Стилизация элементов форм
     ------------------------------------------------------------------------------- */
@@ -150,6 +169,11 @@ $(document).ready(function() {
             $bToTop.fadeOut(400);
         }
     });
+
+    /* Вызываем событие resize
+    ------------------------------------------------------------------------------- */
+
+    $(window).trigger('resize');
 });
 
 $(window).load(function() {
@@ -198,7 +222,7 @@ $(window).load(function() {
     /* Слайдер заведений
     ------------------------------------------------------------------------------- */
 
-    /*var $bPlacesSlider = $('.b-places__slider');
+    var $bPlacesSlider = $('.b-places__slider');
 
     if ($bPlacesSlider.length) {
         var placesSlider = new Sly($bPlacesSlider.find('.b-places__slider__wrapper'), {
@@ -210,16 +234,25 @@ $(window).load(function() {
             nextPage: $bPlacesSlider.find('.b-pagination__next'),
             prevPage: $bPlacesSlider.find('.b-pagination__prev'),
         }).init();
-    }*/
+    }
+
+    $bPlacesSlider.find('.b-places__slider__wrapper a').fancybox();
 
     /* Установка высоты слайдеров
     ------------------------------------------------------------------------------- */
 
     $(window).resize(function() {
         $('.js-slider').each(function() {
-            $(this)
-                .find('.js-slider__wrapper')
-                .height($(this).find('li:first').css('height'));
+            var height = 0;
+            var $this  = $(this);
+
+            $this.find('li').each(function() {
+                if ($(this).outerHeight() > height) {
+                    height = $(this).outerHeight();
+                }
+            });
+            
+            $this.find('.js-slider__wrapper').height(height);
         });
     });
 

@@ -13,6 +13,10 @@
     <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <script>
+        var city = '';
+    </script>
 </head>
 <body>
 
@@ -27,20 +31,8 @@
             <div class="container">
                 <div class="b-top-line__location b-top-line__col">
                     Ваш город: 
-                    <select class="form-select styler">
-                        <option value="">Москва</option>
-                        <option value="">Московская область</option>
-                        <option value="">Санкт-Петербург</option>
-                        <option value="">Новосибирск</option>
-                        <option value="">Урюпинск</option>
-                        <option value="">Екатеринбург</option>
-                        <option value="">Нижний Новгород</option>
-                        <option value="">Казань</option>
-                        <option value="">Самара</option>
-                        <option value="">Челябинск</option>
-                        <option value="">Омск</option>
-                        <option value="">Ростов-на-Дону</option>
-                    </select>
+
+                    <a href="#" class="b-top-line__location__city link link--dashed" data-modal=".b-set-location">Москва</a>
                 </div>
 
                 <div class="b-top-line__logo b-top-line__col b-logo">
@@ -50,6 +42,8 @@
                 </div>
 
                 <div class="b-top-line__contacts b-contacts b-top-line__col">
+                    <div>Звонок по России бесплатный</div>
+
                     <div class="b-contacts__phone">8 800 700 74 97</div>
 
                     <a href="#" class="link link--dashed" data-modal-form="Заказать звонок">Заказать звонок</a>
@@ -73,11 +67,11 @@
     <form class="b-order-form b-order-form--modal b-form">
         <h2 class="b-order-form__heading heading--l heading">Оставьте Ваши контакты,<br>и наш менеджер свяжется с Вами<br>в течение 4 часов</h2>
 
-        <input type="text" class="form-input form-input--m" placeholder="ваше имя" name="name">
+        <input type="text" class="form-input--modal form-input--m" placeholder="ваше имя" name="name">
 
-        <input type="text" class="form-input form-input--m" placeholder="телефон" name="phone">
+        <input type="text" class="form-input--modal form-input--m" placeholder="телефон" name="phone">
 
-        <input type="text" class="form-input form-input--m" placeholder="e-mail" name="email">
+        <input type="text" class="form-input--modal form-input--m" placeholder="e-mail" name="email">
 
         <input type="hidden" name="title" value="">
 
@@ -85,6 +79,14 @@
 
         <div class="b-order-form__text">* Мы даем 100% конфиденциальность ваших данных</div>
     </form>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <div class="b-set-location">
+        <input type="text" class="form-input form-input--modal form-input--m" placeholder="Введите свой город" name="city" maxlength="20">
+
+        <button type="button" class="btn btn--submit btn--m">Сохранить</button>
+    </div>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 

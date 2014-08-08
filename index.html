@@ -14,6 +14,10 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <link href="css/ie.css" rel="stylesheet" media="all" />
     <![endif]-->
+
+    <script>
+        var city = '';
+    </script>
 </head>
 <body>
 
@@ -28,20 +32,8 @@
             <div class="container">
                 <div class="b-top-line__location b-top-line__col">
                     Ваш город: 
-                    <select class="form-select styler">
-                        <option value="">Москва</option>
-                        <option value="">Московская область</option>
-                        <option value="">Санкт-Петербург</option>
-                        <option value="">Новосибирск</option>
-                        <option value="">Урюпинск</option>
-                        <option value="">Екатеринбург</option>
-                        <option value="">Нижний Новгород</option>
-                        <option value="">Казань</option>
-                        <option value="">Самара</option>
-                        <option value="">Челябинск</option>
-                        <option value="">Омск</option>
-                        <option value="">Ростов-на-Дону</option>
-                    </select>
+
+                    <a href="#" class="b-top-line__location__city link link--dashed" data-modal=".b-set-location">Москва</a>
                 </div>
 
                 <div class="b-top-line__logo b-top-line__col b-logo">
@@ -51,6 +43,8 @@
                 </div>
 
                 <div class="b-top-line__contacts b-contacts b-top-line__col">
+                    <div>Звонок по России бесплатный</div>
+
                     <div class="b-contacts__phone">8 800 700 74 97</div>
 
                     <a href="#" class="link link--dashed" data-modal-form="Заказать звонок">Заказать звонок</a>
@@ -71,11 +65,11 @@
                 <form class="b-order-form b-order-form--default b-order-form--light b-promo__form b-form">
                     <h2 class="b-order-form__heading heading--l heading">Оставить заявку<br>прямо сейчас!</h2>
 
-                    <input type="text" class="form-input form-input--m" placeholder="ваше имя" name="name">
+                    <input type="text" class="form-input form-input--default form-input--m" placeholder="ваше имя" name="name">
 
-                    <input type="text" class="form-input form-input--m" placeholder="телефон" name="phone">
+                    <input type="text" class="form-input form-input--default form-input--m" placeholder="телефон" name="phone">
 
-                    <input type="text" class="form-input form-input--m" placeholder="e-mail" name="email">
+                    <input type="text" class="form-input form-input--default form-input--m" placeholder="e-mail" name="email">
 
                     <input type="hidden" name="title" value="Форма с первого экрана">
 
@@ -97,31 +91,31 @@
             <div class="b-profits__item">
                 <img src="img/b-profits__item-1.png" alt="" class="b-profits__item__image">
 
-                <p class="b-profits__item__text">Ваш сад под ключ всего за <br>490 000 руб.</p>
+                <p class="b-profits__item__text">Ваш детский <strong>сад под ключ</strong><br> всего за 590 тыс. рублей</p>
             </div>
 
             <div class="b-profits__item">
                 <img src="img/b-profits__item-2.png" alt="" class="b-profits__item__image">
 
-                <p class="b-profits__item__text">Благоприятная среда для<br> развития Ваших детей</p>
+                <p class="b-profits__item__text">Благоприятная <br><strong>среда для развития</strong><br> для Ваших детей</p>
             </div>
 
             <div class="b-profits__item">
                 <img src="img/b-profits__item-3.png" alt="" class="b-profits__item__image">
 
-                <p class="b-profits__item__text">Окупаемость от 6ти<br> месяцев</p>
+                <p class="b-profits__item__text"><strong>Окупаемость</strong> от 6-ти месяцев</p>
             </div>
 
             <div class="b-profits__item">
                 <img src="img/b-profits__item-4.png" alt="" class="b-profits__item__image">
 
-                <p class="b-profits__item__text">Вы занимаетесь<br> благодарным делом<br> и помогаете людям</p>
+                <p class="b-profits__item__text">Более 10 лет мы<br><strong>успешно зарабатываем</strong><br> на этом рынке</p>
             </div>
 
             <div class="b-profits__item">
                 <img src="img/b-profits__item-5.png" alt="" class="b-profits__item__image">
 
-                <p class="b-profits__item__text">Не имеет сезонности,<br>стабильный рынок с<br>постоянными клиентами</p>
+                <p class="b-profits__item__text">Не имеет сезонности,<br> <strong>стабильный рынок</strong> с постоянными клиентами</p>
             </div>
         </div><!-- /.container -->
     </section>
@@ -136,35 +130,135 @@
                 <div class="b-places__slider__wrapper" id="b-places__slider__wrapper">
                     <ul>
                         <li class="b-places__item">
-                            <img src="img/b-places__item-1.jpg" alt="" class="b-places__item__image">
+                            <a href="img/places/1-big.jpg" class="b-places__item__image">
+                                <img src="img/places/1-small.jpg" alt="">
+                            </a>
 
-                            <div class="b-places__item__name">Детский сад «Заботушка 1»</div>
-
-                            <!-- <div class="b-places__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div> -->
-                        </li>
-
-                        <li class="b-places__item">
-                            <img src="img/b-places__item-2.jpg" alt="" class="b-places__item__image">
-
-                            <div class="b-places__item__name">Детский сад «Заботушка 2»</div>
+                            <!-- <div class="b-places__item__name">Детский сад «Заботушка 1»</div> -->
 
                             <!-- <div class="b-places__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div> -->
                         </li>
 
                         <li class="b-places__item">
-                            <img src="img/b-places__item-3.jpg" alt="" class="b-places__item__image">
+                            <a href="img/places/2-big.jpg" class="b-places__item__image">
+                                <img src="img/places/2-small.jpg" alt="">
+                            </a>
+                        </li>
 
-                            <div class="b-places__item__name">Детский сад «Заботушка 3»</div>
+                        <li class="b-places__item">
+                            <a href="img/places/3-big.jpg" class="b-places__item__image">
+                                <img src="img/places/3-small.jpg" alt="">
+                            </a>
+                        </li>
 
-                            <!-- <div class="b-places__item__address"><strong>Адрес:</strong> Москва, ул. Ласкового<br> пони 16, второй этаж, каб. 302</div> -->
+                        <li class="b-places__item">
+                            <a href="img/places/4-big.jpg" class="b-places__item__image">
+                                <img src="img/places/4-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/5-big.jpg" class="b-places__item__image">
+                                <img src="img/places/5-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/6-big.jpg" class="b-places__item__image">
+                                <img src="img/places/6-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/7-big.jpg" class="b-places__item__image">
+                                <img src="img/places/7-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/8-big.jpg" class="b-places__item__image">
+                                <img src="img/places/8-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/9-big.jpg" class="b-places__item__image">
+                                <img src="img/places/9-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/10-big.jpg" class="b-places__item__image">
+                                <img src="img/places/10-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/11-big.jpg" class="b-places__item__image">
+                                <img src="img/places/11-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/12-big.jpg" class="b-places__item__image">
+                                <img src="img/places/12-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/13-big.jpg" class="b-places__item__image">
+                                <img src="img/places/13-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/14-big.jpg" class="b-places__item__image">
+                                <img src="img/places/14-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/15-big.jpg" class="b-places__item__image">
+                                <img src="img/places/15-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/16-big.jpg" class="b-places__item__image">
+                                <img src="img/places/16-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/17-big.jpg" class="b-places__item__image">
+                                <img src="img/places/17-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/18-big.jpg" class="b-places__item__image">
+                                <img src="img/places/18-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/19-big.jpg" class="b-places__item__image">
+                                <img src="img/places/19-small.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li class="b-places__item">
+                            <a href="img/places/20-big.jpg" class="b-places__item__image">
+                                <img src="img/places/20-small.jpg" alt="">
+                            </a>
                         </li>
                     </ul>
                 </div>
 
-                <!-- <div class="b-pagination b-pagination-\-light b-places__pagination">
+                <div class="b-pagination b-pagination--light b-places__pagination">
                     <a href="#" class="b-pagination__prev"></a>
                     <a href="#" class="b-pagination__next"></a>
-                </div> -->
+                </div>
             </div><!-- /.b-places__slider -->
         </div><!-- /.container -->
     </section>
@@ -178,22 +272,19 @@
             <h2 class="heading heading--section b-advantages__heading">Почему выбирают нашу франшизу<br>детского сада «Заботушка»?</h2>
             
             <div class="b-advantages__item b-advantages__item--1">
-                <div><p class="b-advantages__item__text">Управление из любой точки мира через нашу <nobr>CPM-систему</nobr> с видеонаблюдением.</p></div>
+                <div><p class="b-advantages__item__text"><strong>Управление из любой точки мира</strong> <br>через нашу СРМ систему с видеонаблюдением, автоматическая система обучения и контроля On-line. </p></div>
             </div>
 
             <div class="b-advantages__item b-advantages__item--2">
-                <div>
-                    <p class="b-advantages__item__text">Полный комплекс поддержки.</p>
-                    <p class="b-advantages__item__text">Включает: подбор помещения, подбор сотрудников и обучение, юридическое у бухгалтерское сопровождение и т. д.</p>
-                </div>
+                <div><p class="b-advantages__item__text">Самый <strong>полный комплекс поддержки</strong> <br>(включает: подбор помещения, поиск сотрудников и обучение, юридическое и <br>бухгалтерское сопровождение и т.д.)</p></div>
             </div>
 
             <div class="b-advantages__item b-advantages__item--3">
-                <div><p class="b-advantages__item__text">Возможность взять кредит на выгодных условиях!</p></div>
+                <div><p class="b-advantages__item__text">Можно открыть детский садик в кредит по выгодным условиям, <strong>более 10 банков партнеров</strong> с выгодными условиями.</p></div>
             </div>
             
             <div class="b-advantages__item b-advantages__item--4">
-                <div><p class="b-advantages__item__text">Профессиональная маркетинговая программа.</p></div>
+                <div><p class="b-advantages__item__text"><strong>Профессиональная маркетинговая программа</strong>, включающая Брэнд БУК, план открытия, рекламные модули, основы работы с промоутерами и каналами рекламы.</p></div>
             </div>
         </div><!-- /.container -->
     </section>
@@ -209,11 +300,11 @@
             <form class="b-order-form b-order-form--default b-form b-order__form">
                 <h2 class="b-order-form__heading heading--l heading">Оставить заявку<br>прямо сейчас!</h2>
 
-                <input type="text" class="form-input form-input--m" placeholder="ваше имя" name="name">
+                <input type="text" class="form-input form-input--default form-input--m" placeholder="ваше имя" name="name">
 
-                <input type="text" class="form-input form-input--m" placeholder="телефон" name="phone">
+                <input type="text" class="form-input form-input--default form-input--m" placeholder="телефон" name="phone">
 
-                <input type="text" class="form-input form-input--m" placeholder="e-mail" name="email">
+                <input type="text" class="form-input form-input--default form-input--m" placeholder="e-mail" name="email">
                 
                 <input type="hidden" name="title" value="">
 
@@ -237,37 +328,37 @@
             <div class="b-features__item">
                 <img src="img/b-features__item-1.png" alt="" class="b-features__item__image">
 
-                <p class="b-features__item__text">Профессиональные специалисты</p>
+                <p class="b-features__item__text">Квалифицированные воспитатели, <br>прошедшие обучение и аккредитацию.</p>
             </div>
 
             <div class="b-features__item">
                 <img src="img/b-features__item-2.png" alt="" class="b-features__item__image">
 
-                <p class="b-features__item__text">Уникальная клубная система «Арси»</p>
+                <p class="b-features__item__text">Уникальные авторские методики обучения детей, <br>отточенные за 20 лет воспитания.</p>
             </div>
 
             <div class="b-features__item">
                 <img src="img/b-features__item-3.png" alt="" class="b-features__item__image">
 
-                <p class="b-features__item__text">Постоянно растущая сеть</p>
+                <p class="b-features__item__text">Постоянно растущая сеть детских садов<br> в России и СНГ.</p>
             </div>
 
             <div class="b-features__item">
                 <img src="img/b-features__item-4.png" alt="" class="b-features__item__image">
 
-                <p class="b-features__item__text">Красивый бизнес по открытой и <br>доступной модели</p>
+                <p class="b-features__item__text">Пакеты для различных возрастных групп<br> от 1 года до 8 лет.</p>
             </div>
 
             <div class="b-features__item">
                 <img src="img/b-features__item-5.png" alt="" class="b-features__item__image">
 
-                <p class="b-features__item__text">Высокие стандарты сервиса</p>
+                <p class="b-features__item__text">Государственная поддержка и субсидирование<br> до 500 000 рублей!</p>
             </div>
 
             <div class="b-features__item">
                 <img src="img/b-features__item-6.png" alt="" class="b-features__item__image">
 
-                <p class="b-features__item__text">Приятная атмосфера и постоянные<br> довольные клиенты</p>
+                <p class="b-features__item__text">Различные дополнительные услуги:<br> нянечка, индивидуальный воспитатель,<br> уроки английского и т.д.</p>
             </div>
         </div><!-- /.container -->
     </section>
@@ -291,7 +382,7 @@
 
                 <tbody class="b-plans__table__options">
                     <tr>
-                        <td class="option">1. Подробный бизнес план</td>
+                        <td class="option">Бизнес план</td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
@@ -299,7 +390,7 @@
                     </tr>
 
                     <tr>
-                        <td class="option">2. Бренд бук</td>
+                        <td class="option">Бренд бук</td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
@@ -307,31 +398,23 @@
                     </tr>
 
                     <tr>
-                        <td class="option">3. Регистрация и бухгалтерское сопровождение ИП для ООО</td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="option">4. Подбор помещения</td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="option">Юридическая и бухгалтерская консультация on-line</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">5. Подбор и обучение персонала</td>
+                        <td class="option">Консультации специалиста по детским садам <nobr>On-line</nobr> в рабочее время</td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
-                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">6. Облачная система учета и контроля <nobr>под ключ с</nobr> видеонаблюдением</td>
+                        <td class="option">Консультаций специалиста по детским садам <nobr>On-line</nobr> 24 часа в сутки</td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
@@ -339,26 +422,58 @@
                     </tr>
 
                     <tr>
-                        <td class="option">7. Индивидуальный маркетинговый план при открытии</td>
+                        <td class="option">Консультирование по выбору помещения для детского сада</td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="option">8. Индивидуальный дизайн макет оформления «АРСИ» салона</td>
-                        <td class="plan"><span class="b-plans__option--no"></span></td>
-                        <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
 
                     <tr>
-                        <td class="option">9. Корпоративный сайт</td>
+                        <td class="option">Обучение управлению детским садом в реальных условиях </td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="option">Облачная система учета и контроля под ключ</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="option">Индивидуальный маркетинговый план<br> при открытии</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="option">Индивидуальный дизайн макета детского сада </td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="option">Корпоративный сайт</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                        <td class="plan"><span class="b-plans__option--yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="option">Сертификат в рамке</td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
+                        <td class="plan"><span class="b-plans__option--no"></span></td>
                         <td class="plan"><span class="b-plans__option--yes"></span></td>
                     </tr>
                 </tbody>
@@ -367,19 +482,19 @@
                     <tr>
                         <td class="option">Цена</td>
                         <td class="plan">
-                            <div class="b-plans__price">3 500 <small>руб</small></div>
+                            <div class="b-plans__price">79000 <small>руб</small></div>
                             <a href="#" class="btn btn--m btn--submit b-plans__order-btn" data-modal-form="Заявка на экономный пакет">Заказать</a>
                         </td>
                         <td class="plan">
-                            <div class="b-plans__price">10 500 <small>руб</small></div>
+                            <div class="b-plans__price">127000 <small>руб</small></div>
                             <a href="#" class="btn btn--m btn--submit b-plans__order-btn" data-modal-form="Заявка на сокращенный пакет">Заказать</a>
                         </td>
                         <td class="plan">
-                            <div class="b-plans__price">500 <small>руб</small></div>
+                            <div class="b-plans__price">198000 <small>руб</small></div>
                             <a href="#" class="btn btn--m btn--submit b-plans__order-btn" data-modal-form="Заявка на базовый пакет">Заказать</a>
                         </td>
                         <td class="plan">
-                            <div class="b-plans__price">25 500 <small>руб</small></div>
+                            <div class="b-plans__price">248000 <small>руб</small></div>
                             <a href="#" class="btn btn--m btn--submit b-plans__order-btn" data-modal-form="Заявка на премиум пакет»">Заказать</a>
                         </td>
                     </tr>
@@ -398,35 +513,51 @@
                 <div class="b-confidence__slider__wrapper js-slider__wrapper" id="b-confidence__slider__wrapper">
                     <ul>
                         <li class="b-confidence__item">
-                            <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
+                            <div class="b-confidence__item__image">
+                                <img src="img/confidence/1.jpg" alt="">
+                            </div>
 
-                            <p class="b-confidence__item__desc">У нас работают лучшие воспитатели (ТОП 100 лучших воспитателей).</p>
-
-                            <p class="b-confidence__item__desc">Приятная атмосфера специально разработнаая для разных возрастных групп детей</p>
+                            <p class="b-confidence__item__desc">Довольные дети, довольные родители - вот из чего складывается успешный бизнес в детском саду.</p>
                         </li>
 
                         <li class="b-confidence__item">
-                            <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
+                            <div class="b-confidence__item__image">
+                                <img src="img/confidence/2.jpg" alt="">
+                            </div>
 
-                            <p class="b-confidence__item__desc">У нас работают лучшие воспитатели (ТОП 100 лучших воспитателей).</p>
-
-                            <p class="b-confidence__item__desc">Приятная атмосфера специально разработнаая для разных возрастных групп детей</p>
+                            <p class="b-confidence__item__desc">Кубок за победу в конкурсе “За самую сильную поддержку франчайзи”, г.Москва, 2014.</p>
                         </li>
 
                         <li class="b-confidence__item">
-                            <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
+                            <div class="b-confidence__item__image">
+                                <img src="img/confidence/3.jpg" alt="">
+                            </div>
 
-                            <p class="b-confidence__item__desc">У нас работают лучшие воспитатели (ТОП 100 лучших воспитателей).</p>
-
-                            <p class="b-confidence__item__desc">Приятная атмосфера специально разработнаая для разных возрастных групп детей</p>
+                            <p class="b-confidence__item__desc">Мы обучили более 50 воспитателей, которых любят и ценят родители и наши маленькие гости.</p>
                         </li>
 
                         <li class="b-confidence__item">
-                            <img src="img/b-confidence__item-1.jpg" alt="" class="b-confidence__item__image">
+                            <div class="b-confidence__item__image">
+                                <img src="img/confidence/4.jpg" alt="">
+                            </div>
 
-                            <p class="b-confidence__item__desc">У нас работают лучшие воспитатели (ТОП 100 лучших воспитателей).</p>
+                            <p class="b-confidence__item__desc">У нас собственная команда разработчиков, которая каждый день делает нашу с Вами работу проще, внедряя новые технологии для обработки заявок и ведения учета. Положитесь на них.</p>
+                        </li>
 
-                            <p class="b-confidence__item__desc">Приятная атмосфера специально разработнаая для разных возрастных групп детей</p>
+                        <li class="b-confidence__item">
+                            <div class="b-confidence__item__image">
+                                <img src="img/confidence/5.jpg" alt="">
+                            </div>
+
+                            <p class="b-confidence__item__desc">Наши дети самые счастливые, потому что мы любим свою работу!</p>
+                        </li>
+
+                        <li class="b-confidence__item">
+                            <div class="b-confidence__item__image">
+                                <img src="img/confidence/6.jpg" alt="">
+                            </div>
+
+                            <p class="b-confidence__item__desc">Мы сами проводим и огрганизуем праздники для детей и обучаем этому всех наших партнеров!</p>
                         </li>
                     </ul>
                 </div><!-- /.b-confidence__slider__wrapper -->
@@ -449,15 +580,15 @@
                 <h3 class="heading b-check-form__heading b-check-form__heading--2">Отправьте заявку!</h3>
 
                 <div class="b-check-form__group">
-                    <input type="text" class="form-input form-input--m" placeholder="город" name="town">
+                    <input type="text" class="form-input form-input--default form-input--m" placeholder="город" name="town">
                 </div>
                 
                 <div class="b-check-form__group">
-                    <input type="text" class="form-input form-input--m" placeholder="ваше имя" name="name">
+                    <input type="text" class="form-input form-input--default form-input--m" placeholder="ваше имя" name="name">
 
-                    <input type="text" class="form-input form-input--m" placeholder="телефон" name="phone">
+                    <input type="text" class="form-input form-input--default form-input--m" placeholder="телефон" name="phone">
 
-                    <input type="text" class="form-input form-input--m" placeholder="e-mail" name="email">
+                    <input type="text" class="form-input form-input--default form-input--m" placeholder="e-mail" name="email">
                 </div>
 
                 <input type="hidden" name="title" value="Интересно, не занят ли город">
@@ -474,61 +605,74 @@
             <h2 class="heading heading--section b-reviews__heading">Отзывы</h2>
 
             <div class="b-reviews__item">
-                <img src="img/b-reviews__item-1.jpg" alt="" class="b-reviews__item__image">
+                <img src="img/reviews/1.jpg" alt="" class="b-reviews__item__image">
 
                 <div class="b-reviews__item__main">
                     <div class="b-reviews__item__top">
-                        <div class="b-reviews__item__author">Юлия Александрова</div>
+                        <div class="b-reviews__item__author">Марина</div>
 
-                        <a href="https://vk.com/aleksayulya" class="b-reviews__item__link link link--solid" target="_blank">https://vk.com/aleksayulya</a>
+                        <a href="https://vk.com/id5894288" class="b-reviews__item__link link link--solid" target="_blank">https://vk.com/id5894288</a>
                     </div>
 
                     <div class="b-reviews__item__text">
-                        Уровень дохода: <span class="b-reviews__item__income">10 000 000 <small>руб.</small></span>
+                        Вложила <span class="b-reviews__item__income">780 000 <small>руб</small></span>
                     </div>
 
                     <div class="b-reviews__item__text">
-                        Мне помог открыть бизнес мой мужчина. Я давно искала себе занятие и меня всегда привлекала красота. В своем салоне я чувствую себя очень свободно и легко. Мне действительно нравится заниматься моим делом. Все работники стали моими подругами,также как и клиентки. Мне нравится проводить время в своем салоне и при этом я зарабатываю и чувствую себя независимой. Я искренне считаю, что когда девушка занята своим делам она счастлива. Я могу про себя сказать, что я счастливый человек и в какой то мере, это произошло благодаря АРСИ Маникюр.<br>Выбирала из нескольких франшиз. Остановилась на АРСИ Маникуюр так как понятный бизнес в котором и я сама являюсь клиентом. Денег на бизнес не хватало, но мне предложили возможность кредитования. Салон был открыт через 1 месяц и я вышла на окупаемость уже через 2 недели, благодаря четкой и гибкой маркетинговой программе, что Планирую открыть еще два салон.
+                        Зарабатываю <span class="b-reviews__item__income">211 000 <small>руб</small></span>
+                    </div>
+
+                    <div class="b-reviews__item__text">
+                        Я всегда хотела и мечтала о своем бизнесе, и при этом я хотела уделять внимание своим детям, поэтому давно задумалась о своем детском садике. Я думала о том как его открывать самой или по франшизе, долго думала но все взвесив поняла, что по франшизе значитеьно выгодней. Увидела рекламу в интернете,где говорилось что Детские сады Заботушка победили в конкурсе поддержки франчайзи. После этого я, почитала отзывы и решилась приобрести. Также же, оказалось я могу сама придумать дизайн и обставить детский сад, так как я пожелаю, думаю что это очень важно в любой франшизе! В результате у меня есть любимый бизнес с детьми со стабильным доходом! В этом бизнесе главно, что бы Вы сами любили детей и использовали инструменты, которые дает франшиза садов «Заботушка» и тогда Ваш сад будет радовать Вас прибылью. Моя прибыль за послдедний месяц составила 211 тыс. рублей и я планирую открывать второй садик, также по франшизе «Заботушка». Успехов Вам в начинаниях!
                     </div>
                 </div><!-- /.b-reviews__item__main -->
             </div><!-- /.b-reviews__item -->
 
             <div class="b-reviews__item b-reviews__item--reverted">
-                <img src="img/b-reviews__item-2.jpg" alt="" class="b-reviews__item__image">
+                <img src="img/reviews/2.jpg" alt="" class="b-reviews__item__image">
 
                 <div class="b-reviews__item__main">
                     <div class="b-reviews__item__top">
-                        <div class="b-reviews__item__author">Юлия Козлова</div>
+                        <div class="b-reviews__item__author">Мария Машковцева</div>
 
-                        <a href="https://vk.com/yuliakozlova" class="b-reviews__item__link link link--solid" target="_blank">https://vk.com/yuliakozlova</a>
+                        <a href="https://vk.com/mashkovtseva" class="b-reviews__item__link link link--solid" target="_blank">https://vk.com/mashkovtseva</a>
                     </div>
 
                     <div class="b-reviews__item__text">
-                        Прибыль: <span class="b-reviews__item__income">20 000 000 <small>руб.</small></span>
+                        Вложила <span class="b-reviews__item__income">680 000 <small>руб</small></span>
                     </div>
 
                     <div class="b-reviews__item__text">
-                        Выбирала из нескольких франшиз. Остановилась на АРСИ Маникуюр так как понятный бизнес в котором и я сама являюсь клиентом. Денег на бизнес не хватало, но мне предложили возможность кредитования. Салон был открыт через 1 месяц и я вышла на окупаемость уже через 2 недели, благодаря четкой и гибкой маркетинговой программе, что Планирую открыть еще два салона.
+                        Зарабатываю <span class="b-reviews__item__income">149 000 <small>руб</small></span>
+                    </div>
+
+                    <div class="b-reviews__item__text">
+                        Занималась туристическим бизнесом и была менеджером. Выбирала из нескольких бизнесов, совместно со своим молодым человеком. Остановились на детском саду, так как видели в нем высокую доходность и возможность проводить время с со своими детьми в будущем.  Опыта предпринимательского не было, и поэтому сразу после приобретения было много вопросов, как регистрировать, как искать аренду, как нанимать персонал, как управлять. И этих вопросов было бесконечно множество, к счастью в данной компании подход очень комплексный и мы получали ответы на все вопросы и даже более того нам помогли найти аренду и персонал, а также зарегистрировать ИП и подавать отчетности в последствии. Ни на одну минуту у меня не было сомнения в правильности выбора франшизы «Заботушка», я благодарна за такую комплексную поддержку и внимание ко мне. Думаю, что при такой поддержку и внимание к франчайзи, не возможно не открыть и успешно запустить свой бизнес, чего Вам и желаю!Было бы желание, а для всего остального есть франшиза «Заботушки».
+
                     </div>
                 </div><!-- /.b-reviews__item__main -->
             </div><!-- /.b-reviews__item -->
 
             <div class="b-reviews__item">
-                <img src="img/b-reviews__item-3.jpg" alt="" class="b-reviews__item__image">
+                <img src="img/reviews/3.jpg" alt="" class="b-reviews__item__image">
 
                 <div class="b-reviews__item__main">
                     <div class="b-reviews__item__top">
-                        <div class="b-reviews__item__author">Айгуль Мурашкина</div>
+                        <div class="b-reviews__item__author">Светлана Чернова</div>
 
-                        <a href="https://vk.com/aigulyami" class="b-reviews__item__link link link--solid" target="_blank">https://vk.com/aigulyami</a>
+                        <a href="https://vk.com/id9625195" class="b-reviews__item__link link link--solid" target="_blank">https://vk.com/id9625195</a>
                     </div>
 
                     <div class="b-reviews__item__text">
-                        Прибыль: <span class="b-reviews__item__income">5 000 000 <small>руб.</small></span>
+                        Вложила <span class="b-reviews__item__income">580 000 <small>руб</small></span>
                     </div>
 
                     <div class="b-reviews__item__text">
-                        Всегда хотела заняться своим бизнесом, так как видела в этом самовыражение. Вдобавок сама являлась клиенткой АРСИ Маникюр, как только узнала про запуск франшиз , решилась практически не раздумывая. Очень боялась, что не получится, так как это для меня первый бизнес. К счастью в Арси маникюр все разложено по этапам, и на каждом этапе на помощь приходил специалист, который подсказывал помогал и, самое главное, поддерживал. С ними я чувствовала, что не одна и что с такой командой не возможно не прийти к успеху. Как впрочем и случилось. Сегодня я владелица Салона АРСИ Маникюр я независима и успешна и самое главное у меня всегда красивые пальчики :)
+                        Зарабатываю <span class="b-reviews__item__income">119 000 <small>руб</small></span>
+                    </div>
+
+                    <div class="b-reviews__item__text">
+                        Обратила внимание на франшизу Детского сада, внимательно изучила ее. Денег на открытие не хватало, но у ребят есть программа лизинга, которой я и воспользовалась. Изначально меня подкупила собственная система учета CRM, комплексный подход к открытию бизнеса, а также эта компания существует на рынке 10 лет, то есть они 10 лет зарабатывают на этом. Бизнесом раньше не занималась, поэтому требовалась помощь на всех этапах в регистрации ИП, поиске аренды, найме персонала, обучении сотрудников, рекламе и продвижении. На всех стадиях открытия поддержкой меня обеспечили, и даже более того, подбадривали эмоционально, и обучали тому, как строится бизнес на детских садах. Если Вы не пробовали заниматься бизнесом и боитесь начать так же как и я-перестаньте бояться, получилось у меня-получится и у Вас. Верьте в себя!
                     </div>
                 </div><!-- /.b-reviews__item__main -->
             </div><!-- /.b-reviews__item -->
@@ -591,19 +735,19 @@
                 <div class="b-partners__slider__wrapper js-slider__wrapper" id="b-partners__slider__wrapper">
                     <ul>
                         <li class="b-partners__item">
-                            <img src="img/b-partners__item-1.jpg" alt="" class="b-partners__item__image">
+                            <img src="img/partners/1.jpg" alt="" class="b-partners__item__image">
                         </li>
                         <li class="b-partners__item">
-                            <img src="img/b-partners__item-2.jpg" alt="" class="b-partners__item__image">
+                            <img src="img/partners/2.jpg" alt="" class="b-partners__item__image">
                         </li>
                         <li class="b-partners__item">
-                            <img src="img/b-partners__item-3.jpg" alt="" class="b-partners__item__image">
+                            <img src="img/partners/3.jpg" alt="" class="b-partners__item__image">
                         </li>
                         <li class="b-partners__item">
-                            <img src="img/b-partners__item-4.jpg" alt="" class="b-partners__item__image">
+                            <img src="img/partners/4.jpg" alt="" class="b-partners__item__image">
                         </li>
                         <li class="b-partners__item">
-                            <img src="img/b-partners__item-5.png" alt="" class="b-partners__item__image">
+                            <img src="img/partners/5.png" alt="" class="b-partners__item__image">
                         </li>
                     </ul>
                 </div><!-- /.b-partners__slider__wrapper -->
@@ -631,11 +775,11 @@
             <form class="b-order-form b-order-form--default b-form b-order__form">
                 <h2 class="b-order-form__heading heading--l heading">Оставить заявку<br>прямо сейчас!</h2>
 
-                <input type="text" class="form-input form-input--m" placeholder="ваше имя" name="name">
+                <input type="text" class="form-input form-input--default form-input--m" placeholder="ваше имя" name="name">
 
-                <input type="text" class="form-input form-input--m" placeholder="телефон" name="phone">
+                <input type="text" class="form-input form-input--default form-input--m" placeholder="телефон" name="phone">
 
-                <input type="text" class="form-input form-input--m" placeholder="e-mail" name="email">
+                <input type="text" class="form-input form-input--default form-input--m" placeholder="e-mail" name="email">
 
                 <input type="hidden" name="title" value="Форма для вопросов, в конце">
 
@@ -682,11 +826,11 @@
     <form class="b-order-form b-order-form--modal b-form">
         <h2 class="b-order-form__heading heading--l heading">Оставьте Ваши контакты,<br>и наш менеджер свяжется с Вами<br>в течение 4 часов</h2>
 
-        <input type="text" class="form-input form-input--m" placeholder="ваше имя" name="name">
+        <input type="text" class="form-input form-input--modal form-input--m" placeholder="ваше имя" name="name">
 
-        <input type="text" class="form-input form-input--m" placeholder="телефон" name="phone">
+        <input type="text" class="form-input form-input--modal form-input--m" placeholder="телефон" name="phone">
 
-        <input type="text" class="form-input form-input--m" placeholder="e-mail" name="email">
+        <input type="text" class="form-input form-input--modal form-input--m" placeholder="e-mail" name="email">
 
         <input type="hidden" name="title" value="">
 
@@ -734,6 +878,14 @@
             интересы третьих лиц; вся предоставленная информация заполнена
             Гражданином в отношении себя лично
         </p>
+    </div>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <div class="b-set-location">
+        <input type="text" class="form-input form-input--modal form-input--m" placeholder="Введите свой город" name="city" maxlength="20">
+
+        <button type="button" class="btn btn--submit btn--m">Сохранить</button>
     </div>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
