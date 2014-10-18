@@ -423,10 +423,10 @@ img {
 .fancybox-close {
   background: url("../img/fancybox/close-icon.png") no-repeat;
   position: absolute;
-  top: 12px;
-  top: 0.75rem;
-  right: 12px;
-  right: 0.75rem;
+  top: 20px;
+  top: 1.25rem;
+  right: 20px;
+  right: 1.25rem;
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -1100,8 +1100,8 @@ img {
   display: none;
   padding: 40px 60px;
   padding: 2.5rem 3.75rem;
-  max-width: 480px;
-  max-width: 30rem;
+  max-width: 496px;
+  max-width: 31rem;
   width: 100%;
 }
 .b-order-form--modal .b-order-form__heading {
@@ -1588,6 +1588,7 @@ img {
   font-size: 18px;
   font-size: 1.125rem;
   text-indent: 15px;
+  text-align: justify;
 }
 .b-policy__text + .b-policy__text {
   margin-top: 15px;
